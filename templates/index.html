@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <title>Gold Tracker</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .col {
+            text-align: center;
+            float: left;
+            width: 50%;
+            padding: 3px;
+            height: 600px;
+            border: 2px solid #333;
+            border-bottom: 5px solid #333;
+            border-top: 5px solid #333;
+        }
+        
+        .col2 {
+            text-align: center;
+            float: left;
+            width: 100%;
+            padding: 3px;
+            height: 300px;
+            border: 2px solid #333;
+            border-bottom: 5px solid #333;
+            border-top: 5px solid #333;
+            margin: auto;
+        }
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .col {
+                width: 100%;
+            }
+            .col2 {
+                width: 100%;
+            }
+        }
+        
+        .iframe_graph {
+            block-size: 100%;
+            height: 100%
+        }
+        
+        .vendor_table {
+            border: 2px solid black;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            height: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gold Tracker</h1>
+    <div class="topnav">
+        <a href="{{ url_for('dashboard') }}">Dashboard </a>
+    </div>
+    <div class="row">
+        <h1 style="text-align: center;">Gold Price Data</h1>
+        <div class="col" style="background-color: #c2ddc3">
+            <h2>Vendor Prices</h2>
+            <table class="vendor_table" style="text-align:center">
+                <thead>
+                    <tr>
+                        <th title="Field #1">Gold Vendors</th>
+                        <th title="Field #2">Spot Prices</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>APMEX</td>
+                        <td>$1,936.29 </td>
+                    </tr>
+                    <tr>
+                        <td>Money Metals Exchange</td>
+                        <td>$1,929.80 </td>
+                    </tr>
+                    <tr>
+                        <td>Provident Metals</td>
+                        <td>$1,900.51 </td>
+                    </tr>
+                    <tr>
+                        <td>JM Bullion</td>
+                        <td>$1,928.60 </td>
+                    </tr>
+                    <tr>
+                        <td>Westminster Mint</td>
+                        <td>$1,894.19 </td>
+                    </tr>
+                    <tr>
+                        <td>SD Bullion</td>
+                        <td>$1,912.34 </td>
+                    </tr>
+                    <tr>
+                        <td>Gold &amp; Silver, Inc.</td>
+                        <td>$1,917.20 </td>
+                    </tr>
+                    <tr>
+                        <td>BGASC.com</td>
+                        <td>$1,891.32 </td>
+                    </tr>
+                    <tr>
+                        <td>Silver.com</td>
+                        <td>$1,916.57 </td>
+                    </tr>
+                    <tr>
+                        <td>Amagi Metals</td>
+                        <td>$1,625.39 </td>
+                    </tr>
+                    <tr>
+                        <strong><td style="color:red">Average</td></strong>
+                        <strong><td style="color: red">$1,885.22 </td></strong>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col" style="background-color: #c2ddc3;">
+            <h2>Live Price Data</h2>
+            <iframe class="iframe_graph" src="https://www.goldbroker.com/widget/historical/XAU?height=500&currency=USD" scrolling="no" frameborder="0" width="100%" height="500" style="border: 0; overflow: hidden;"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <h1 style="text-align: center;">Purchase Considerations</h1>
+        <div class="col2" style="background-color: #c2ddc3;">
+            <h2>Purchase 1</h2>
+            <ul>
+                <li>this is temp information to see how it is displayed</li>
+                <li>this is temp information to see how it is displayed</li>
+                <li>this is temp information to see how it is displayed</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <h1 style="text-align: center;">Sale Considerations</h1>
+        <div class="col2" style="background-color: #c2ddc3;">
+            <h2>Sale 1</h2>
+            <ul>
+                <li>this is temp information to see how it is displayed</li>
+                <li>this is temp information to see how it is displayed</li>
+                <li>this is temp information to see how it is displayed</li>
+            </ul>
+        </div>
+    </div>
+    <div class="topnav">
+        <a href="{{ url_for('dashboard') }}">Dashboard </a>
+    </div>
+</body>
+
+</html>
